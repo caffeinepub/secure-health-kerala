@@ -1,41 +1,71 @@
 {
   "kind": "build_request",
-  "title": "Set custom site slug to AryaTatainsurance",
+  "title": "Reset header emblem using uploaded image",
   "projectName": "Secure Health Kerala",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-10",
-      "text": "Configure the site’s custom domain/slug name as \"AryaTatainsurance\" (replacing the previously invalid \"Arya@Tata-Insurance\") and ensure the generated shareable site URL uses this slug without validation errors.",
-      "target": "unknown",
+      "id": "REQ-11",
+      "text": "Reset the sticky header/top emblem image to use the newly uploaded emblem image (download-1.jpg) instead of the current generated logo, while keeping the existing advisor text and call CTA unchanged.",
+      "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-recent-6"
         ],
         "quotes": [
-          "AryaTatainsurance"
+          "need to reset this emblem"
         ]
       },
       "acceptanceCriteria": [
-        "The configured domain/slug is exactly \"AryaTatainsurance\".",
-        "The slug passes the platform validation rules (5–50 characters; only letters, numbers, and hyphens).",
-        "After applying the slug, the site can be opened via the platform’s shareable URL using the new slug without any error messages about invalid characters.",
-        "No user-facing text is introduced or changed to a non-English language as part of this update."
+        "Header emblem graphic in the sticky top bar is updated to the new uploaded emblem artwork (not the previous /assets/generated/tata-aig-logo.dim_512x512.png).",
+        "Advisor text remains visible and unchanged: \"Arya Vineeth\" and \"TATA AIG Advisor\".",
+        "The call CTA remains unchanged and continues to use tel:9495670101.",
+        "The emblem displays cleanly (no distortion), preserves aspect ratio, and fits within the existing header height on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Add an optimized static asset version of the uploaded emblem for web use and reference it from the header (place the finalized image under frontend/public/assets/).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-recent-6"
+        ],
+        "quotes": [
+          "need to reset this emblem"
+        ]
+      },
+      "acceptanceCriteria": [
+        "An optimized emblem asset is available under frontend/public/assets/ (e.g., PNG) derived from download-1.jpg.",
+        "HeaderTopBar references the new static asset path under /assets/ rather than pointing to the old generated logo path.",
+        "Image alt text is English and accurately describes the emblem."
       ]
     }
   ],
   "constraints": [
-    "Keep all existing landing-page content, sections, CTAs, and the advisor hash anchor behavior unchanged.",
-    "Do not edit files under frontend/src/components/ui or other frontend immutable paths.",
-    "Any user-facing text related to this change must be in English."
+    "Do not modify immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Do not change the configured site slug/domain (must remain \"AryaTatainsurance\").",
+    "Keep backend single-actor architecture unchanged; no backend changes are required for this emblem reset."
   ],
   "nonGoals": [
-    "Adding new landing-page sections or changing existing section content.",
-    "Changing the existing hash anchor (#arya-vineeth-tata-aig-advisor) behavior or IDs.",
-    "Implementing custom DNS, external domain hosting, or third-party deployment integrations."
+    "Changing advisor name/designation text.",
+    "Changing phone number or WhatsApp links.",
+    "Updating other section imagery (hero illustration, advisor portrait) unless explicitly requested."
   ],
   "imageRequirements": {
     "required": [],
-    "edits": []
+    "edits": [
+      "Prepare a clean, web-optimized emblem asset (download-1.jpg > header-emblem-reset.dim_512x512.png)"
+    ]
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

@@ -1,32 +1,43 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Configure custom site slug to AryaTatainsurance",
+  "title": "Secure Health Kerala — Reset sticky header emblem to uploaded image",
   "requirements": [
     {
-      "id": "REQ-10",
-      "summary": "Set the site slug to \"AryaTatainsurance\" and ensure shareable URL generation uses a validation-safe slug.",
+      "id": "REQ-11",
+      "summary": "Update the sticky header emblem to use the newly uploaded emblem image while keeping advisor text and call CTA unchanged.",
       "acceptanceCriteria": [
-        "The configured domain/slug is exactly \"AryaTatainsurance\".",
-        "The slug passes the platform validation rules (5–50 characters; only letters, numbers, and hyphens).",
-        "After applying the slug, the site can be opened via the platform’s shareable URL using the new slug without any error messages about invalid characters.",
-        "No user-facing text is introduced or changed to a non-English language as part of this update."
+        "Header emblem graphic in the sticky top bar is updated to the new uploaded emblem artwork (not the previous /assets/generated/tata-aig-logo.dim_512x512.png).",
+        "Advisor text remains visible and unchanged: \"Arya Vineeth\" and \"TATA AIG Advisor\".",
+        "The call CTA remains unchanged and continues to use tel:9495670101.",
+        "The emblem displays cleanly (no distortion), preserves aspect ratio, and fits within the existing header height on mobile and desktop."
       ],
       "file_operations": [
         {
-          "path": "frontend/index.html",
+          "path": "frontend/src/components/sections/HeaderTopBar.tsx",
           "operation": "modify",
-          "description": "Add/update a non-visual configuration marker (for the platform/runtime) that sets the site slug/domain identifier exactly to \"AryaTatainsurance\", replacing the previously invalid value. Keep all existing landing-page content and behavior unchanged."
-        },
+          "description": "Replace the current emblem src (\"/assets/generated/tata-aig-logo.dim_512x512.png\") with the new static asset path \"/assets/header-emblem-reset.dim_512x512.png\"; keep advisor text and tel:9495670101 unchanged; adjust image classes to ensure aspect ratio is preserved (e.g., keep w-auto and add object-contain) so it fits cleanly within the existing header height across breakpoints."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Add a web-optimized emblem static asset under frontend/public/assets and reference it from the header with accurate English alt text.",
+      "acceptanceCriteria": [
+        "An optimized emblem asset is available under frontend/public/assets/ (e.g., PNG) derived from download-1.jpg.",
+        "HeaderTopBar references the new static asset path under /assets/ rather than pointing to the old generated logo path.",
+        "Image alt text is English and accurately describes the emblem."
+      ],
+      "file_operations": [
         {
-          "path": "frontend/src/utils/siteSlug.ts",
+          "path": "frontend/public/assets/header-emblem-reset.dim_512x512.png",
           "operation": "create",
-          "description": "Create a small utility that centralizes the site slug as \"AryaTatainsurance\" and provides a strict validator (length 5–50; only letters, numbers, hyphens) so any shareable-URL construction uses a validation-safe value and avoids invalid-character errors."
+          "description": "Create an optimized PNG emblem asset derived from the uploaded download-1.jpg at frontend/public/assets/header-emblem-reset.dim_512x512.png (sized/cropped for clean header display and web delivery)."
         },
         {
-          "path": "frontend/src/main.tsx",
+          "path": "frontend/src/components/sections/HeaderTopBar.tsx",
           "operation": "modify",
-          "description": "Wire the centralized slug utility into app bootstrap to ensure the configured slug is the one used by any runtime/share-link generation logic, and to fail-safe to the valid slug value without introducing any new user-facing copy or UI changes."
+          "description": "Update the <img> alt text to an accurate English description of the emblem (e.g., \"TATA AIG emblem\") and ensure the referenced src points to /assets/header-emblem-reset.dim_512x512.png (not the old generated logo)."
         }
       ]
     }

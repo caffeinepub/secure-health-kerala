@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
+  "projectStateVersion": 11,
   "summary": "Build a marketing website for \"Secure Health Kerala\" (health insurance advisory) with defined landing-page sections, contact CTAs, and brand design settings.",
   "architectural_notes": [
     "Brand/design settings: Primary #0A3D62 (Deep Blue), Secondary #1B9CFC (Light Blue), Background white, rounded buttons, clean & modern font.",
@@ -10,7 +10,8 @@
   "known_issues": [
     "Domain/slug values must be 5–50 characters and contain only letters, numbers, and hyphens (no @ or other special characters)."
   ],
-  "isFixRequest": false,
+  "isFixRequest": true,
+  "imageRequirements": "## Edit Images\n- Prepare a clean, web-optimized emblem asset (download-1.jpg > header-emblem-reset.dim_512x512.png)",
   "existing_features": [
     {
       "id": "feature-create-a-single-page-marketing-website-for-secure-health-kerala-with-the-provided-english-content-and-section-structure-hero-about-tata-aig-health-insurance-plans-what-is-covered-available-plan-options-why-choose-secure-health-kerala-faq-contact-and-footer",
@@ -91,6 +92,22 @@
         "REQ-10"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-reset-the-sticky-header-top-emblem-image-to-use-the-newly-uploaded-emblem-image-download-1-jpg-instead-of-the-current-generated-logo-while-keeping-the-existing-advisor-text-and-call-cta-unchanged",
+      "title": "Reset the sticky header/top emblem image to use the newly uploaded emblem image (download-1.jpg) instead of the current generated logo, while keeping the existing advisor text and call CTA unchanged.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-optimized-static-asset-version-of-the-uploaded-emblem-for-web-use-and-reference-it-from-the-header-place-the-finalized-image-under-frontend-public-assets",
+      "title": "Add an optimized static asset version of the uploaded emblem for web use and reference it from the header (place the finalized image under frontend/public/assets/).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -135,6 +152,12 @@
       "summary": "Configure a valid custom domain/slug name for the site as \"AryaTatainsurance\" (replacing the previously invalid \"Arya@Tata-Insurance\")",
       "reqIds": [],
       "status": "in_progress"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Reset the header/top emblem branding (emblem graphic/text) to the desired default/previous state",
+      "reqIds": [],
+      "status": "pending"
     }
   ],
   "gameProjectType": "none",

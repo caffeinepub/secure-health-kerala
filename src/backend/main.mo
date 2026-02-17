@@ -5,13 +5,13 @@ import Principal "mo:core/Principal";
 import Iter "mo:core/Iter";
 import Order "mo:core/Order";
 import Array "mo:core/Array";
-import Migration "migration";
+
 
 import MixinAuthorization "authorization/MixinAuthorization";
 import AccessControl "authorization/access-control";
 
 // Migrate actor state on upgrade
-(with migration = Migration.run)
+
 actor {
   let siteDomain = "AryaTatainsurance";
   let accessControlState = AccessControl.initState();

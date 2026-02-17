@@ -2,7 +2,7 @@
   "frontend/src/App.tsx": "Main application component that renders the single-page landing and implements hash-based auto-scroll to the Advisor section when URL contains #arya-vineeth-tata-aig-advisor.",
   "frontend/src/hooks/useQueries.ts": "React Query hook for submitting contact form data to the backend.",
   "frontend/src/components/SecureHealthKeralaLandingPage.tsx": "Main landing page component that composes all sections including the new AdvisorSection positioned between WhyChooseUsSection and FaqSection in the scroll flow.",
-  "frontend/src/components/sections/HeaderTopBar.tsx": "Sticky header displaying the TATA AIG logo, advisor name and designation \"Arya Vineeth – TATA AIG Advisor\", and the call CTA button.",
+  "frontend/src/components/sections/HeaderTopBar.tsx": "Sticky header displaying the updated TATA AIG emblem, advisor name and designation \"Arya Vineeth – TATA AIG Advisor\", and the call CTA button with tel:9495670101.",
   "frontend/src/components/sections/HeroSection.tsx": "Hero section with headline, subheading, CTA buttons for call and WhatsApp, and hero illustration.",
   "frontend/src/components/sections/AboutSection.tsx": "About section describing the trusted health insurance partner with four key features.",
   "frontend/src/components/sections/TataAigSection.tsx": "TATA AIG Health Insurance Plans section with comprehensive benefits list.",

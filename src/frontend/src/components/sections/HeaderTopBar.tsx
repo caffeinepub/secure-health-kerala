@@ -7,9 +7,9 @@ export default function HeaderTopBar() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="/assets/generated/tata-aig-logo.dim_512x512.png"
-              alt="TATA AIG Insurance"
-              className="h-12 md:h-14 w-auto"
+              src="/assets/generated/header-emblem-reset.dim_512x512.png"
+              alt="TATA AIG emblem"
+              className="h-12 md:h-14 w-auto object-contain"
             />
             <div className="hidden sm:block border-l border-gray-300 pl-3">
               <p className="text-sm md:text-base font-bold text-brand-primary leading-tight">
