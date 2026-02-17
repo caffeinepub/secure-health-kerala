@@ -1,0 +1,25 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-configure-the-site-s-custom-domain-slug-name-as-aryatatainsurance-replacing-the-previously-invalid-arya-tata-insurance-and-ensure-the-generated-shareable-site-url-uses-this-slug-without-validation-errors",
+      "featureTitle": "Configure the site’s custom domain/slug name as \"AryaTatainsurance\" (replacing the previously invalid \"Arya@Tata-Insurance\") and ensure the generated shareable site URL uses this slug without validation errors.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/utils/siteSlug.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

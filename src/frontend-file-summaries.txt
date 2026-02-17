@@ -1,0 +1,22 @@
+{
+  "frontend/src/App.tsx": "Main application component that renders the single-page landing and implements hash-based auto-scroll to the Advisor section when URL contains #arya-vineeth-tata-aig-advisor.",
+  "frontend/src/hooks/useQueries.ts": "React Query hook for submitting contact form data to the backend.",
+  "frontend/src/components/SecureHealthKeralaLandingPage.tsx": "Main landing page component that composes all sections including the new AdvisorSection positioned between WhyChooseUsSection and FaqSection in the scroll flow.",
+  "frontend/src/components/sections/HeaderTopBar.tsx": "Sticky header displaying the TATA AIG logo, advisor name and designation \"Arya Vineeth – TATA AIG Advisor\", and the call CTA button.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section with headline, subheading, CTA buttons for call and WhatsApp, and hero illustration.",
+  "frontend/src/components/sections/AboutSection.tsx": "About section describing the trusted health insurance partner with four key features.",
+  "frontend/src/components/sections/TataAigSection.tsx": "TATA AIG Health Insurance Plans section with comprehensive benefits list.",
+  "frontend/src/components/sections/CoverageSection.tsx": "Coverage details section showing what is covered with icons.",
+  "frontend/src/components/sections/PlanOptionsSection.tsx": "Available plan options section displaying five different plan types.",
+  "frontend/src/components/sections/WhyChooseUsSection.tsx": "Why Choose Us section highlighting five key reasons with gradient background.",
+  "frontend/src/components/sections/FaqSection.tsx": "FAQ section using accordion component for four common questions.",
+  "frontend/src/components/sections/ContactSection.tsx": "Contact section with contact information cards and embedded contact form.",
+  "frontend/src/components/ContactForm.tsx": "Validated contact form with name, phone, email, message fields and backend submission.",
+  "frontend/src/components/sections/FooterSection.tsx": "Footer with company info, phone number, service area, copyright, and caffeine.ai attribution.",
+  "frontend/src/index.css": "Global styles with brand color system (Deep Blue #0A3D62, Light Blue #1B9CFC) using OKLCH, modern typography, and utility classes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with brand color tokens and custom design system.",
+  "frontend/src/components/sections/AdvisorSection.tsx": "Advisor section with stable anchor id=\"arya-vineeth-tata-aig-advisor\", scroll-mt-20 for sticky header offset, and updated portrait image using arya-vineeth-portrait-upload.dim_800x800.png.",
+  "frontend/index.html": "HTML entry point with meta tag for site slug configuration set to \"AryaTatainsurance\".",
+  "frontend/src/utils/siteSlug.ts": "Centralized site slug utility that provides the slug \"AryaTatainsurance\" with validation ensuring it meets platform requirements (5-50 characters, only letters/numbers/hyphens).",
+  "frontend/src/main.tsx": "Application entry point that initializes the validated site slug on bootstrap and exposes it globally for runtime/share-link generation."
+}

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Build a marketing website for \"Secure Health Kerala\" (health insurance advisory) with defined landing-page sections, contact CTAs, and brand design settings.",
+  "architectural_notes": [
+    "Brand/design settings: Primary #0A3D62 (Deep Blue), Secondary #1B9CFC (Light Blue), Background white, rounded buttons, clean & modern font.",
+    "Service area messaging: Kerala & across India.",
+    "Primary contact number/WhatsApp: 9495670101."
+  ],
+  "known_issues": [
+    "Domain/slug values must be 5–50 characters and contain only letters, numbers, and hyphens (no @ or other special characters)."
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-marketing-website-for-secure-health-kerala-with-the-provided-english-content-and-section-structure-hero-about-tata-aig-health-insurance-plans-what-is-covered-available-plan-options-why-choose-secure-health-kerala-faq-contact-and-footer",
+      "title": "Create a single-page marketing website for “Secure Health Kerala” with the provided English content and section structure: Hero, About, TATA AIG Health Insurance Plans, What Is Covered, Available Plan Options, Why Choose Secure Health Kerala, FAQ, Contact, and Footer.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-prominent-primary-call-to-action-buttons-for-calling-and-whatsapp-using-phone-number-9495670101-in-the-hero-section-and-make-the-phone-number-easily-actionable-tel-link-wherever-it-appears",
+      "title": "Implement prominent primary call-to-action buttons for calling and WhatsApp using phone number 9495670101 in the Hero section, and make the phone number easily actionable (tel link) wherever it appears.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-form-with-fields-name-phone-number-email-message-and-a-submit-button-labeled-get-free-quote-and-connect-it-to-backend-persistence-so-submissions-are-saved-for-later-retrieval",
+      "title": "Add a Contact form with fields Name, Phone Number, Email, Message, and a submit button labeled “Get Free Quote”, and connect it to backend persistence so submissions are saved for later retrieval.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-the-provided-brand-design-settings-consistently-across-the-site-primary-color-0a3d62-secondary-color-1b9cfc-white-background-rounded-buttons-and-a-clean-modern-typography-style",
+      "title": "Apply the provided brand design settings consistently across the site: Primary color #0A3D62, secondary color #1B9CFC, white background, rounded buttons, and a clean modern typography style.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-basic-static-brand-imagery-logo-wordmark-and-a-hero-illustration-as-local-static-assets-and-render-them-in-the-ui-logo-in-header-top-area-illustration-in-hero-section-without-routing-images-through-the-backend",
+      "title": "Generate and include basic static brand imagery (logo wordmark and a hero illustration) as local static assets, and render them in the UI (logo in header/top area, illustration in Hero section) without routing images through the backend.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-advisor-section-to-the-landing-page-that-displays-an-advisor-profile-picture-and-the-advisor-name-arya-vineeth-in-english-styled-consistently-with-the-existing-brand-design",
+      "title": "Add a new “Advisor” section to the landing page that displays an advisor profile picture and the advisor name “Arya Vineeth” in English, styled consistently with the existing brand design.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-sticky-header-top-emblem-area-to-clearly-show-the-advisor-designation-text-exactly-as-arya-vineeth-tata-aig-advisor-and-incorporate-the-uploaded-tata-aig-logo-image-as-the-emblem-graphic-replacing-the-current-secure-health-kerala-logo-image-in-the-header",
+      "title": "Update the sticky header/top emblem area to clearly show the advisor designation text exactly as: \"Arya Vineeth – TATA AIG Advisor\", and incorporate the uploaded TATA AIG logo image as the emblem graphic (replacing the current Secure Health Kerala logo image in the header).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-advisor-section-profile-image-with-the-user-uploaded-arya-vineeth-photo-and-ensure-it-is-displayed-as-a-clean-centered-circular-portrait-consistent-with-the-existing-advisor-section-styling",
+      "title": "Replace the Advisor section profile image with the user-uploaded Arya Vineeth photo, and ensure it is displayed as a clean, centered, circular portrait consistent with the existing Advisor section styling.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-clean-shareable-url-hash-anchor-that-includes-arya-vineeth-tata-aig-advisor-wording-and-scrolls-users-directly-to-the-advisor-section-when-opened-e-g-visiting-the-site-with-the-hash-present-should-auto-scroll-to-the-advisor-section",
+      "title": "Implement a clean, shareable URL hash anchor that includes Arya Vineeth + TATA AIG Advisor wording and scrolls users directly to the Advisor section when opened (e.g., visiting the site with the hash present should auto-scroll to the Advisor section).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-configure-the-site-s-custom-domain-slug-name-as-aryatatainsurance-replacing-the-previously-invalid-arya-tata-insurance-and-ensure-the-generated-shareable-site-url-uses-this-slug-without-validation-errors",
+      "title": "Configure the site’s custom domain/slug name as \"AryaTatainsurance\" (replacing the previously invalid \"Arya@Tata-Insurance\") and ensure the generated shareable site URL uses this slug without validation errors.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create website structure and content sections (Hero, About, TATA AIG plans, Coverage, Plan Options, Why Choose Us, FAQ, Contact Form, Footer) for Secure Health Kerala",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add prominent CTAs for Call Now and WhatsApp (9495670101) across the site",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement contact form with fields: Name, Phone Number, Email, Message and submit button text \"Get Free Quote\"",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Apply brand design settings: Deep Blue #0A3D62, Light Blue #1B9CFC, white background, rounded buttons, clean & modern font",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Update the top emblem/header branding text to include advisor designation: \"Arya Vineeth – TATA AIG Advisor\"",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Create a clean, shareable website link/URL path (or hash anchor) that includes Arya Vineeth + TATA AIG Advisor (e.g., /advisor/arya-vineeth or #arya-vineeth-tata-aig-advisor)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Configure a valid custom domain/slug name for the site as \"AryaTatainsurance\" (replacing the previously invalid \"Arya@Tata-Insurance\")",
+      "reqIds": [],
+      "status": "in_progress"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Secure Health Kerala",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
